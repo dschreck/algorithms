@@ -1,4 +1,4 @@
-function insertSort(unsorted) {
+const insertSort = function(unsorted) {
   const n = unsorted.length;
   const sorted = Array(n);
 
@@ -20,7 +20,7 @@ function insertSort(unsorted) {
   return sorted;
 }
 
-function selectSort(unsorted) {
+const selectSort = function(unsorted) {
   const sorted = [];
   const n = unsorted.length;
 
@@ -37,7 +37,7 @@ function selectSort(unsorted) {
   }
 }
 
-function bubbleSort(input) {
+const bubbleSort = function(input) {
   //
 }
 
