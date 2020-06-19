@@ -8,9 +8,9 @@ test('insert sort', async () => {
 });
 
 test('select sort', async () => {
-    // expect(selectSort(unsorted)).toEqual(sorted);
+    expect(selectSort(unsorted)).toEqual(sorted);
 });
 
 test('bubble sort', async () => {
-    // expect(bubbleSort(unsorted)).toEqual(sorted);
+    expect(bubbleSort(unsorted)).toEqual(sorted);
 });

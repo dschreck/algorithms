@@ -15,3 +15,4 @@
 15. Kruskal’s Algorithm for finding Minimum Spanning Tree
 16. Single-Source Shortest Paths — Dijkstra’s Algorithm
 17. All-Pairs Shortest Paths — Floyd Warshall Algorithm
+18. Palindromes

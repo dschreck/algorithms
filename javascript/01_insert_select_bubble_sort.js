@@ -1,3 +1,10 @@
+const swap = (input, i, j) => {
+  const tmp = input[i];
+  input[i] = input[j];
+  input[j] = tmp;
+  return input;
+}
+
 const insertSort = function(unsorted) {
   const n = unsorted.length;
   const sorted = Array(n);
@@ -20,25 +27,34 @@ const insertSort = function(unsorted) {
   return sorted;
 }
 
-const selectSort = function(unsorted) {
-  const sorted = [];
-  const n = unsorted.length;
+const selectSort = function(input) {
+  const len = input.length;
 
-  const swap = (input, i, j) => {
-    const tmp = input[i];
-    input[i] = input[j];
-    input[j] = tmp;
-
-    return input;
+  for (let i = 0; i < len; i++) {
+    let min = i;
+    for (let j = i + 1; j < len; j++) {
+      if (input[j] < input[min]) {
+        min = j;
+      }
+    }
+    if (i !== min) {
+      input = swap(input, i, min);
+    }
   }
 
-  for (let i = 0; i < n; i++) {
-
-  }
+  return input;
 }
 
 const bubbleSort = function(input) {
-  //
+  const len = input.length;
+  for (let i = 0; i < len; i++) {
+    for (let j = 0, stop = len - i; j < stop; j++) {
+      if (input[j] > input[j+1]) {
+        input = swap(input, j, j+1);
+      }
+    }
+  }
+  return input;
 }
 
 module.exports = {
