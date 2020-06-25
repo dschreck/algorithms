@@ -28,14 +28,11 @@ test("insert", () => {
   // prints 5 7 9 10 13 15 17 22 25 27
   BST.inOrder(root);
 
-  console.log('===============');
   // Removing node with no children
   BST.remove(5);
 
   root = BST.getRootNode();
   BST.breadthFirstTraversal(root);
-  console.log('===============');
-  console.log(BST.height(root));
 
   // prints 7 9 10 13 15 17 22 25 27
   // BST.inOrder(root);

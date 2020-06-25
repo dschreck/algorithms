@@ -50,3 +50,33 @@ const palindromeProximity = (str) => {
   return proximity.toFixed(2) + '%';
 
 }
+
+const isPermutationOfPalindrom = (phrase) => {
+  phrase = clean(phrase);
+  const table = [];
+  
+  for (let i = 0; i < phrase.length; i++) {
+    let code = phrase.charCodeAt(i);
+    if (table[code]) {
+      table[code]++;
+    } else {
+      table[code] = 1;
+    }
+  }
+
+  let foundOneOdd = false;
+  let valid = true;
+  for (let i = 0; i < table.length; i++) {
+    if (table[i] % 2 === 1) {
+      if (foundOneOdd === true) {
+        valid = false;
+        break;
+      }
+      foundOneOdd = true;      
+    }
+  }
+
+  return valid;
+}
+
+export { isPalindrome, isPermutationOfPalindrom, palindromeProximity };

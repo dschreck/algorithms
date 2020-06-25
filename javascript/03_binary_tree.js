@@ -83,13 +83,13 @@ class BinarySearchTree {
   inOrder(node) {
     if (node !== null) {
       this.inOrder(node.left);
-      console.log(node.key);
+      //console.log(node.key);
       this.inOrder(node.right);
     }
   }
   preOrder(node) {
     if (node !== null) {
-      console.log(node.key);
+      // console.log(node.key);
       this.preOrder(node.left);
       this.preOrder(node.right);
     }
@@ -98,7 +98,7 @@ class BinarySearchTree {
     if (node !== null) {
       this.postOrder(node.left);
       this.postOrder(node.right);
-      console.log(node.key);
+      // console.log(node.key);
     }
   }
   search(node, key) {
@@ -134,7 +134,7 @@ class BinarySearchTree {
 
     while (queue.length > 0) {
       let leaf = queue.shift();
-      console.log(leaf.key);
+      // console.log(leaf.key);
 
       if (leaf.left === null && leaf.right === null) {
         continue;
